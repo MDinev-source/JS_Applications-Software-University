@@ -1,0 +1,29 @@
+<header>
+    <nav>
+        <ul>
+            {{#if isAuth}}
+            <li>
+                <a href="">Create new offer</a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="../public/sneakers.png" alt="">
+                </a>
+            </li>
+            <li>Welcome, xxx@xx.xxx |
+                <a href="">Logout</a>
+            </li>
+
+            {{else}}
+            <li class="site-logo">Shoe</li>
+            <li>
+                <a href="#/home">
+                    <img src="../public/sneakers.png" alt="">
+                </a>
+            </li>
+            <li class="site-logo">Shelf</li>
+
+            {{/if}}
+        </ul>
+    </nav>
+</header>
