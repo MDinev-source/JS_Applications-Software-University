@@ -1,9 +1,9 @@
-export function registerUser(username, password){
-    return firebaseConfig.auth().createUserWithEmailAndPassword(username,password);
+export function registerUser(email, password){
+    return firebase.auth().createUserWithEmailAndPassword(email,password);
 }
 
-export function login(username, password) {
-    return firebase.auth().signInWithEmailAndPassword(username, password);
+export function login(email, password) {
+    return firebase.auth().signInWithEmailAndPassword(email, password);
 }
 
 export function logout() {
