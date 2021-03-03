@@ -1,4 +1,5 @@
 import {getHome } from "./controller/home.js";
+import { getCreate, postCreate } from "./controller/offers.js";
 import {getLogin, getLogout, getRegister, postLogin, postRegister} from './controller/user.js';
 
 const app = Sammy("body", function() {
@@ -13,6 +14,9 @@ this.get('#/login', getLogin);
 this.post('#/login', postLogin);
 
 this.get('#/logout', getLogout);
+
+this.get('#/create', getCreate);
+this.post('#/create',postCreate);
 
 })
 

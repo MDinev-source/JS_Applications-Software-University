@@ -1,24 +1,30 @@
-        {{> header}}
-        {{#if isAuth}}
-           <div class="shoes">
-            <div class="shoe">
-                <img src="https://i1.t4s.cz/products/ar4149-001/nike-air-zoom-pegasus-36-gs-251390-ar4149-001.jpeg">
-                <h3>Nike Pegasus</h3>
-                <a>Buy it for $72,90</a>
-            </div>
-        </div>
+{{> header}}
+{{#if isAuth}}
 
-        {{else}}
-            <div class="container">
-            <div class="about-us">
-                <div>
-                    <img src="../public/shoes.jpg" alt="">
-                    <img src="../public/shoes2.jpg" alt="">
-                </div>
-                <p>
-                    <a href="#/register">Register Now</a> and Try it!
-                </p>
-            </div>
+{{#each offers}}
+<div class="shoes">
+    <div class="shoe">
+        <img src="{{imageUrl}}">
+        <h3>{{name}}</h3>
+        <a href="#/details/{{id}}">Buy it for ${{price}}</a>
+    </div>
+</div>
+{{else}}
+<h1>No shoes to display. Be the first to create a new offer...</h1>
+{{/each}}
+
+{{else}}
+<div class="container">
+    <div class="about-us">
+        <div>
+            <img src="../public/shoes.jpg" alt="">
+            <img src="../public/shoes2.jpg" alt="">
         </div>
-        {{/if}}
-        {{>footer}}
+        <p>
+            <a href="#/register">Register Now</a> and Try it!
+        </p>
+    </div>
+</div>
+{{/if}}
+
+{{>footer}}
