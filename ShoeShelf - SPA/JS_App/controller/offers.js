@@ -1,4 +1,4 @@
-import { create } from "../models/offers.js";
+import { create, get } from "../models/offers.js";
 import { setHeader } from "./auth.js";
 import commonPartial from './partials.js'
 
@@ -16,4 +16,23 @@ export function postCreate(ctx) {
         .then(res => {
             ctx.redirect('#/home')
         }).catch(e => console.log(e))
+}
+
+export function getDetail(ctx) {
+    setHeader(ctx);
+
+    const id = ctx.params.id;
+
+    get(id)
+        .then(res => {
+
+            const offer = { ...res.data(), id: res.id };
+
+            ctx.iSSalesman = offer.salesman === sessionStorage.getItem('user');
+
+            ctx.offer = offer;
+
+            ctx.loadPartials(commonPartial).partial('./view/offers/details.hbs');
+
+        }).catch(e => console.log(e));
 }
