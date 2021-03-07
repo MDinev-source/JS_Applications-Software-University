@@ -1,23 +1,26 @@
+{{>header}}
+<h1>Edit Offer</h1>
+<p class="message"></p>
+<form action="#/edit/{{offer.id}}" method="Post">
+    <div>
+        <input type="text" placeholder="Name..." name="name" value="{{offer.name}}">
+    </div>
+    <div>
+        <input type="text" placeholder="Price..." name="price" value="{{offer.price}}">
+    </div>
+    <div>
+        <input type="text" placeholder="Image url..." name="imageUrl" value="{{offer.imageUrl}}">
+    </div>
+    <div>
+        <textarea placeholder="Give us some description about this offer...">{{offer.description}}</textarea>
+    </div>
+    <div>
+        <input type="text" placeholder="Brand..." name="brand" value="{{offer.brand}}">
+    </div>
+    <div>
+        <button>Edit</button>
+    </div>
+</form>
 
-        <h1>Edit Offer</h1>
-        <p class="message"></p>
-        <form>
-            <div>
-                <input type="text" placeholder="Name...">
-            </div>
-            <div>
-                <input type="text" placeholder="Price...">
-            </div>
-            <div>
-                <input type="text" placeholder="Image url...">
-            </div>
-            <div>
-                <textarea placeholder="Give us some description about this offer..."></textarea>
-            </div>
-            <div>
-                <input type="text" placeholder="Brand...">
-            </div>
-            <div>
-                <button>Edit</button>
-            </div>
-        </form>
+
+{{>footer}}

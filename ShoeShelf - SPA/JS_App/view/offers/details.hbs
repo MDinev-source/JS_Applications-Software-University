@@ -3,8 +3,7 @@
 <div class="offer-details">
     <h1>{{offer.name}}</h1>
     <div class="info">
-        <img src="{{offer.imageUrl}}"
-            alt="">
+        <img src="{{offer.imageUrl}}" alt="">
         <div class="description">
             {{offer.description}}
             <br>
@@ -16,7 +15,8 @@
 
         {{#if iSSalesman}}
 
-        <a>Edit</a>
+        <a href="#/edit/{{offer.id}}">Edit</a>
+
         <a>Delete</a>
 
         {{else}}

@@ -318,6 +318,7 @@ form div button:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: baseline;
+    width: 100%;
 }
 
 .shoe {
@@ -355,7 +356,7 @@ form div button:hover {
 
 .shoe img {
     /* border: 1px solid var(--main-blue); */
-    max-width: 250px;
+    max-width: 150px;
     display: block;
     margin: 0 auto;
 }
