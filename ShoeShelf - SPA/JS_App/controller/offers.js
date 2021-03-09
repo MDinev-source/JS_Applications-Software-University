@@ -47,7 +47,6 @@ export function getEdit(ctx) {
 export function postEdit(ctx) {
     const { name, price, imageUrl, description, brand } = ctx.params;
     const id = ctx.params.id;
-console.log(ctx.params)
 
     update(id, { name, price, imageUrl, description, brand })
         .then(res => {
