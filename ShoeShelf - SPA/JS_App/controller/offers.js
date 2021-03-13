@@ -1,4 +1,4 @@
-import { create, get, update } from "../models/offers.js";
+import { create, get, update, close } from "../models/offers.js";
 import { setHeader } from "./auth.js";
 import commonPartial from './partials.js'
 
@@ -12,7 +12,7 @@ export function postCreate(ctx) {
 
     const salesman = sessionStorage.getItem('user');
 
-    create({ name, price, imageUrl, description, brand, salesman })
+    create({ name, price, imageUrl, description, brand, salesman, buyers: 0 })
         .then(res => {
             ctx.redirect('#/home')
         }).catch(e => console.log(e))
@@ -53,3 +53,12 @@ export function postEdit(ctx) {
             ctx.redirect(`#/details/${id}`);
         }).catch(e => console.log(e));
 }
+
+export function getDelete(ctx) {
+    const id = ctx.params.id;
+
+    close(id).then(res => {
+        ctx.redirect('#/home');
+    }).catch(e => console.log(e));
+}
+
