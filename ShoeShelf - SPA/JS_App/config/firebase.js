@@ -1,11 +1,11 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyDy61lIK5nbY6RiGdwjoHx3S9uwgQrbnMM",
-  authDomain: "offers-8bf2f.firebaseapp.com",
-  projectId: "offers-8bf2f",
-  storageBucket: "offers-8bf2f.appspot.com",
-  messagingSenderId: "605261669029",
-  appId: "1:605261669029:web:baa13c0471c6ac1684a34c",
-  measurementId: "G-6FZWJPS4GD"
+  apiKey: "AIzaSyDfgRLwNWKz24RWdf7vfy9QbecKohke-yg",
+  authDomain: "offers-fc753.firebaseapp.com",
+  projectId: "offers-fc753",
+  storageBucket: "offers-fc753.appspot.com",
+  messagingSenderId: "1086471443216",
+  appId: "1:1086471443216:web:e43d210ee92c63a5ec4b95",
+  measurementId: "G-JTCMNHL652"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

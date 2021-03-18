@@ -7,6 +7,7 @@
         <div class="description">
             {{offer.description}}
             <br>
+            Buyers: {{offer.buyers}}
             <br>
             <p class="price">${{offer.price}}</p>
         </div>
@@ -27,7 +28,7 @@
 
         {{else}}
 
-        <a>Buy</a>
+        <a href="#/buy/{{offer.id}}">Buy</a>
 
         {{/if}}
         {{/if}}

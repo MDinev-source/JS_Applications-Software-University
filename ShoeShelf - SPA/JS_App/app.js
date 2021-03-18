@@ -1,5 +1,5 @@
 import { getHome } from "./controller/home.js";
-import { getCreate, getDelete, getDetail, getEdit, postCreate, postEdit } from "./controller/offers.js";
+import { getBuy, getCreate, getDelete, getDetail, getEdit, postCreate, postEdit } from "./controller/offers.js";
 import { getLogin, getLogout, getRegister, postLogin, postRegister } from './controller/user.js';
 
 const app = Sammy("body", function () {
@@ -24,7 +24,7 @@ const app = Sammy("body", function () {
     this.post('#/edit/:id', postEdit);
 
     this.get('#/delete/:id', getDelete);
-
+    this.get('#/buy/:id', getBuy);
 })
 
 app.run('#/home');

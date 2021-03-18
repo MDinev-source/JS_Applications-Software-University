@@ -12,7 +12,7 @@ export function postCreate(ctx) {
 
     const salesman = sessionStorage.getItem('user');
 
-    create({ name, price, imageUrl, description, brand, salesman, buyers: 0 })
+    create({ name, price, imageUrl, description, brand, salesman, buyers: 0, isInTheClientsList: [] })
         .then(res => {
             ctx.redirect('#/home')
         }).catch(e => console.log(e))
@@ -61,4 +61,27 @@ export function getDelete(ctx) {
         ctx.redirect('#/home');
     }).catch(e => console.log(e));
 }
+
+export function getBuy(ctx) {
+    const id = ctx.params.id;
+    get(id)
+        .then(res => {
+            const offer = res.data();
+            const buyers = offer.buyers + 1;
+
+            const email = sessionStorage.getItem("user");
+
+            offer.isInTheClientsList.push(email);
+
+            update(id, { buyers })
+                .then(() => {
+                    ctx.redirect(`#/details/${id}`);
+                }).catch(e => console.log(e));
+
+
+        }).catch(e => console.log(e));
+}
+
+
+
 
