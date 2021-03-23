@@ -1,5 +1,6 @@
 .container {
     /* background-image: url(https://st2.depositphotos.com/1001378/11309/v/950/depositphotos_113095552-stock-illustration-brown-cinema-background-with-retro.jpg); */
+    max-width: 960px;
 }
 .card {
     min-width: 18rem;
@@ -40,4 +41,15 @@
     font-style: italic;
     text-decoration: underline;
     box-shadow: 0 5px 10px #cccccc;
+}
+
+form{
+    width: 100%;
+    margin: 0 auto;
+}
+
+form select option {
+    text-align: center;
+    border-radius: 15px;
+    color: var(--main-blue);
 }
