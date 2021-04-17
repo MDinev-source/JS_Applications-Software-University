@@ -1,0 +1,27 @@
+{{>header}}
+<!-- Dashboard Page ( for Guests and Users ) -->
+<section id="dashboard-page" class="dashboard">
+    <h1>Dashboard</h1>
+    <!-- Display ul: with list-items for All pets (If any) -->
+
+    {{#each pets}}
+    <ul class="other-pets-list">
+
+        <li class="otherPet">
+            <h3>Name: {{name}}</h3>
+            <p>Type: {{type}}</p>
+            <p class="img"><img src="{{imageUrl}}"></p>
+            <a class="button" href="#/details/{{id}}">Details</a>
+        </li>
+    </ul>
+
+    {{else}}
+    <!-- Display paragraph: If there are no pets in the database -->
+    <p class="no-pets">No pets in database!</p>
+    {{/each}}
+</section>
+
+<!-- My Pets Page ( Only for logged-in users ) -->
+
+
+{{>footer}}
